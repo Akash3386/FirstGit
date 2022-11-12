@@ -50,14 +50,14 @@
 // }
 
 // 3) getElementByTagName//
-var li = document.getElementsByTagName('li');
-console.log(items[li]);
-li[1].textContent = 'Hello 2';
-li[4].style.fontWeight = 'bold';
+// var li = document.getElementsByTagName('li');
+// console.log(items[li]);
+// li[1].textContent = 'Hello 2';
+// li[4].style.fontWeight = 'bold';
 
-var newclass = document.getElementsByClassName('new-class-name');
-console.log(newclass[0]);
-newclass[0].style.color = 'red';
+// var newclass = document.getElementsByClassName('new-class-name');
+// console.log(newclass[0]);
+// newclass[0].style.color = 'red';
 // for(var i =0; i < li.length; i++){
 //     li[i].style.fontWeight = 'bold';
 //     if (i===2){
@@ -67,5 +67,46 @@ newclass[0].style.color = 'red';
 //     li[i].style.backgroundColor = '#f4f4f4';
 //     }
 // }
+
+// 4)querySelector //
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+var input = document.querySelector('input');
+input.value = 'Hellow world';
+
+var submit = document.querySelector('input[type="submit"]');
+submit.value = 'SEND';
+
+var items = document.querySelector('.list-group-item');
+items.style.color = 'red';
+
+// items.lastElementChild.style.color = 'yellow';
+
+var seconditem = document.querySelector('.list-group-item:nth-child(2)');
+seconditem.style.backgroundColor = 'green';
+
+var thirditem = document.querySelector('.list-group-item:nth-child(3)');
+console.log(thirditem);
+thirditem.style.color = '#0000';
+
+// 5) querySelectorAll //
+var title = document.querySelectorAll('.title');
+console.log(title);
+title[0].textContent = 'Hello';
+
+var item = document.querySelectorAll('li:nth-child(2)');
+console.log(item);
+item[0].style.color = 'red';
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+// var even = document.querySelectorAll('li:nth-child(even)');
+
+for(var i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor = 'green';
+    // even[i].style.backgroundColor = '#ccc';
+}
+
+
 
 
